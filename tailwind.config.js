@@ -12,6 +12,12 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        oswald: ["Oswald", "sans-serif"], // Add Oswald font to the font family stack
+      },
+      colors: {
+        customViolet: "#B498B7", // Change to your specific color
+      },
     },
   },
   plugins: [],

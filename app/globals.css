@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,15 +16,22 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+@font-face {
+  font-family: 'Oswald';
+  src: url('../public/Oswald-VariableFont_wght.ttf');
+}
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background-color: black;
+    margin: 0px;
+    font-family: 'Oswald';
 }
 
 @layer utilities {
@@ -31,3 +39,5 @@ body {
     text-wrap: balance;
   }
 }
+ 
+
