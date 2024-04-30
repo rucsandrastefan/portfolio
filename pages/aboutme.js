@@ -1,108 +1,115 @@
-// _app.js
 import "tailwindcss/tailwind.css";
-
 import Link from "next/link";
+import styles from "./projects.module.scss";
+import { motion } from "framer-motion";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faFigma,
+} from "@fortawesome/free-brands-svg-icons";
 
-export default function aboutme() {
+export default function Projects() {
   return (
-    <main className=" bg-white min-h-screen">
-      <div className="flex min-h-full">
-        <div className="flex-col pl-8 pt-4">
-          <Link href="/">
-            <div className="text-black hover:text-white hover:bg-black transition duration-300 ease-in-out ">
-              <p
-                className="font-bold font-oswald text-xl m-0 p-0 tracking-tighter"
-                style={{ marginBottom: "-0.5em" }}
-              >
-                RUCSANDRA
-              </p>
-              <p
-                className="font-bold font-oswald text-xl m-0 p-0 "
-               
-              >
-                STEFAN
-              </p>
-              {/* <p className="font-bold font-Oswald text-xl m-0 p-0 ml-1">,</p> */}
-            </div>
-          </Link>
-        </div>
-
-        <div className="flex-grow font-semibold font-sans text-black p-4 pl-28 pt-6 text-lg">
-          <p>visual designer & software engineer</p>
-        </div>
-        <div className="flex-col text-black p-4 pr-24 justify-end">
-          <Link href="/work">
-            <p className="pb-2 font-sans font-bold text-xl hover:text-customViolet cursor-pointer">
-              Work
-            </p>
-          </Link>
-          <Link href="/aboutme">
-            <p className="font-sans font-bold text-xl hover:text-green-400 cursor-pointer">
-              About me
-            </p>
-          </Link>
+    <main className={styles.main}>
+      <div className={styles.header}>
+        <Link href="/">
+          <button className={styles.logo}>
+            <span>Rucsandra</span>
+            <span>Stefan</span>
+          </button>
+        </Link>
+        <div className={styles.buttonsContainer}>
+          <motion.div
+            className={styles.button}
+            whileHover={{ scale: 1.1 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+          >
+            <Link href="projects">Projects</Link>
+          </motion.div>
+          <motion.div
+            className={styles.button}
+            whileHover={{ scale: 1.1 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+          >
+            <Link href="/aboutme">About me</Link>
+          </motion.div>
         </div>
       </div>
-
-      <div className="flex pt-4">
-        <div className="w-full">
-          <p className="text-4xl font-bold text-black pl-8 pt-8 tracking-tighter">
-            Who am <span className="text-customViolet">I</span> ?
-          </p>
-          <div className="w-1/2">
-            <div className="pt-4">
-              <p className="text-black pl-8 pt-4 text-lg font-semibold">
-                I have always considered myself a curious person, driven by a
-                desire to experience as many diverse things as possible. After
-                completing high school, I pursued my university studies in
-                Software Engineering at Politehnica Timișoara. During my third
-                year, I embarked on an Erasmus exchange program, which led me to
-                live in Madrid for six eye-opening months. Immersed in the
-                vibrant culture of Madrid, I found myself captivated by the
-                world of visual arts. It was there that I discovered my passion
-                for art. Upon completing my Bachelor's degree, I made the
-                deliberate choice to delve into a field that allowed me to
-                express my creativity more fully. This led me to enroll in the
-                Master's program in Graphic Design at the University of West
-                Timișoara. My long-term aspiration is to merge{" "}
-                <span className="text-green-400 bg-customViolet font-bold">
-                  technology
-                </span>{" "}
-                with{" "}
-                <span className="font-bold text-customViolet bg-green-400">
-                  creativity
-                </span>
-                , finding the perfect balance between innovation and design. I
-                believe that the field of UI/UX design presents an ideal
-                opportunity to blend my technical skills with my passion for
-                visual aesthetics, ultimately creating impactful and
-                user-centric experiences.
-              </p>
-              {/* Add more content about yourself here */}
-              <p className="pl-8 pt-12 text-xl font-semibold">
-                Other things I have worked on:
-              </p>
-            </div>
+      <div>
+        <h3 className={styles.title}>Crafting Creativity with a Tech Twist</h3>
+        <p className={styles.text}>
+          {" "}
+          I'm Rucsandra, a proud 2000 baby from Timișoara. With a blend of
+          technical prowess and boundless curiosity, I've embarked on a journey
+          that intertwines the worlds of engineering and design. After
+          completing my Bachelor's in Software Engineering at Polytechnic
+          University of Timișoara, I shifted gears and pursued a Master's in
+          Graphic Design at West University of Timișoara to explore my creative
+          side.
+          <br></br>
+          <br></br>Through my academic journey, I've cultivated a unique
+          perspective that merges{" "}
+          <span className={styles.span}>analytical thinking</span> with{" "}
+          <span className={styles.span}>artistic expression</span>. Whether I'm
+          crafting user interfaces or designing captivating visuals, my work is
+          always infused with a blend of precision and creativity. I'm
+          passionate about pushing boundaries and seeking inspiration from every
+          corner of the world.<br></br>
+          <br></br>So, whether you're seeking a tech-minded troubleshooter or a
+          creative mind with an eye for detail, rest assured that I bring both
+          professionalism and passion to the table.
+        </p>
+        <div className={styles.roundedDiv}>
+          {" "}
+          <div className={styles.connectContainer}>
+            <p className={styles.connect}>Let's get to know each other !</p>
           </div>
-          <div className="flex justify-around mt-12 mb-8">
-            <div className="grid grid-cols-4 gap-12 w-5/6">
-              <div className="w-full h-80 bg-black"></div>
-              <div className="w-full h-80 bg-black"></div>
-              <div className="w-full h-80 bg-black"></div>
-              <div className="w-full h-80 bg-black"></div>
-            </div>
-          </div>
-          <div className="justify-items-center text-center">
-            <p className="font-semibold">
-              If you are looking for a resume, you can download it from{" "}
-              <span className="text-customViolet font-bold underline underline-offset-1">
-                here
-              </span>
-              .
-            </p>
-          </div>
-          <div className="justify-items-center text-center bg-customViolet ">
-            <p className="font-bold text-4xl mt-8">Social and contact</p>
+          <div className={styles.iconContainer}>
+            <a
+              href="https://www.linkedin.com/in/rucsandra-stefan/"
+              target="_blank"
+              className={styles.iconLink}
+            >
+              {" "}
+              <div className={styles.icon}>
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                <p className={styles.iconLabel}> LinkedIn</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/rucsandrastefan"
+              target="_blank"
+              className={styles.iconLink}
+            >
+              {" "}
+              <div className={styles.icon}>
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+                <p className={styles.iconLabel}> Github</p>
+              </div>
+            </a>
+            <a
+              href="https://www.figma.com/@rucsandra"
+              target="_blank"
+              className={styles.iconLink}
+            >
+              {" "}
+              <div className={styles.icon}>
+                <FontAwesomeIcon icon={faFigma} size="2x" />
+                <p className={styles.iconLabel}> Figma</p>
+              </div>
+            </a>
+            <a href="mailto:rucsandrastefan@outlook.com" target="_blank">
+              {" "}
+              <div className={styles.icon}>
+                <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                <p className={styles.iconLabel}> E-mail</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

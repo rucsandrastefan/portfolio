@@ -13,25 +13,30 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.header}>
         <button className={styles.logo}>
-        <span>Rucsandra</span>
-  <span>Stefan</span>
+          <span>Rucsandra</span>
+          <span>Stefan</span>
         </button>
         <div className={styles.buttonsContainer}>
+          <motion.div
+            className={styles.button}
+            whileHover={{ scale: 1.1 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+          
+          >
+            <Link href="/projects">
+              Projects
+            </Link>
+          </motion.div>
           <motion.button
             className={styles.button}
             whileHover={{ scale: 1.1 }}
             onHoverStart={(e) => {}}
             onHoverEnd={(e) => {}}
           >
-            Projects
-          </motion.button>
-          <motion.button
-            className={styles.button}
-            whileHover={{ scale: 1.1 }}
-            onHoverStart={(e) => {}}
-            onHoverEnd={(e) => {}}
-          >
-            About me
+           <Link href="/aboutme">
+              About me
+            </Link>
           </motion.button>
         </div>
       </div>
