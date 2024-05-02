@@ -14,7 +14,12 @@
     height: 100vh;
     position: relative;
     background-color: black;
+    overflow: auto;
+  
  
+  }
+  .main::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in Webkit browsers (Chrome, Safari) */
   }
   
   .header {
@@ -136,9 +141,30 @@
     text-underline-offset: 0.1em;
 
   }
+  .projectThumbnails {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    margin-top: 40px; /* Add space between header and thumbnails */
+
+  }
   
+  .thumbnail {
+    width: 500px; /* Adjust thumbnail width */
+    height: 400px; /* Adjust thumbnail height */
+    background-color: gray; /* Temporary color */
+    padding : 10px;
+    margin: 10px 10px; 
+    margin-top: 20px;/* Adjust spacing between thumbnails */
+  }
   
-  
+  .p{
+    color: white;
+    font-family: 'Oswald';
+    font-size: xx-large;
+    align-items: center;
+    font-weight: semibold;
+    line-height: 84%;
+  }
   
   
   
